@@ -23,10 +23,14 @@ public class ShapesTest {
     @Test
     public void tableSquareTest(){
         //: Given
+        Shapes shapes = new Shapes();
+        String expected = "tableSquare()\n*** Output ***\n| 1 | 2 | 3 | 4 |\n| 2 | 4 | 6 | 8 |\n| 3 | 6 | 9 | 12 |\n| 4 | 8 | 12 | 16 |";
 
         //: When
+        String actual = shapes.tableSquare();
 
         //: Then
+        Assert.assertEquals("The two table squares are equal", expected, actual);
     }
 
     @Test
