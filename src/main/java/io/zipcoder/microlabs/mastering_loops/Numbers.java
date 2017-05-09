@@ -90,9 +90,9 @@ public class Numbers {
         String output = "*** Output ***\n";
         String evenNumbersTest = "even("+n+")";
         String filledString = "";
-        for (int i = 1; i < n; i++) {
+        for (int i = 1; i <= n; i++) {
 
-            filledString += "\n"+Integer.toString(((int)Math.pow(2,n)));
+            filledString += "\n"+Integer.toString(((int)Math.pow(2,i)));
 
         }
         return output + evenNumbersTest + filledString;
