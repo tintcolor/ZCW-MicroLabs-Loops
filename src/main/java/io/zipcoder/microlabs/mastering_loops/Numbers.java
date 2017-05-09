@@ -13,7 +13,7 @@ public class Numbers {
             if (i == 10) {
                 filledString += Integer.toString(i);
             } else {
-                filledString += Integer.toString(i) + "\n";
+                filledString +=  "\n"+Integer.toString(i);
             }
         }
         return output + onToTenTitle + filledString;
@@ -65,7 +65,7 @@ public class Numbers {
             filledString += Integer.toString((int) randomNumber) + "\n";
 
         }
-        return "*** Output ***\nrandom4()\n" + random.nextInt(3) + "\n" + random.nextInt(5)
+        return "*** Output ***\nrandom4()\n" + (random.nextInt(3)+1) + "\n" + random.nextInt(5)
                 + "\n" + random.nextInt(2) + "\n" + random.nextInt(8);
 
     }
