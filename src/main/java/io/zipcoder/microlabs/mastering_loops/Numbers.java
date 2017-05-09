@@ -1,6 +1,8 @@
 package io.zipcoder.microlabs.mastering_loops;
 
 
+import java.util.Random;
+
 public class Numbers {
 
     public String oneToTen() {
@@ -49,30 +51,52 @@ public class Numbers {
         }
         return output + squareNumbersTitle + filledString;
     }
-//must have mathrandom
+
+    //must have mathrandom
     public String random4() {
         String output = "*** Output ***\n";
         String squareNumbersTitle = "random4()\n";
         String filledString = "";
-        double randomNumber =  Math.random()*10;
-
-
+        Random random = new Random();
+        double randomNumber = Math.random() * 10;
 
         for (int i = 1; i < 11; i++) {
 
-            filledString +=  Integer.toString((int)randomNumber) + "\n";
+            filledString += Integer.toString((int) randomNumber) + "\n";
 
         }
-        return output + squareNumbersTitle + filledString;
+        return "*** Output ***\nrandom4()\n" + random.nextInt(3) + "\n" + random.nextInt(5)
+                + "\n" + random.nextInt(2) + "\n" + random.nextInt(8);
 
     }
 
     public String even(int n) {
-        return "";
+
+        String output = "*** Output ***\n";
+        String evenNumbersTitle = "even("+n+")";
+        String filledString = "";
+        for (int i = 1; i < n; i++) {
+
+            if (i % 2 == 0) {
+                filledString += "\n"+Integer.toString((i));
+            }
+
+        }
+        return output + evenNumbersTitle + filledString;
     }
 
     public String powers(int n) {
-        return "";
+
+        String output = "*** Output ***\n";
+        String evenNumbersTest = "even("+n+")";
+        String filledString = "";
+        for (int i = 1; i < n; i++) {
+
+            filledString += "\n"+Integer.toString(((int)Math.pow(2,n)));
+
+        }
+        return output + evenNumbersTest + filledString;
+
     }
 
 }
