@@ -33,16 +33,16 @@ public class Shapes {
 
             for (int j = 0, k = 1; j < 4; j++, k++) {
                 if (stringHolder[i] == stringHolder[0]) {
-                    lineOne += " "+ k + " |";
+                    lineOne += " " + k + " |";
                 }
                 if (stringHolder[i] == stringHolder[1]) {
-                    lineTwo += " "+ k  * 2 + " |";
+                    lineTwo += " " + k * 2 + " |";
                 }
                 if (stringHolder[i] == stringHolder[2]) {
-                    lineThree += " "+ k  * 3 + " |";
+                    lineThree += " " + k * 3 + " |";
                 }
                 if (stringHolder[i] == stringHolder[3]) {
-                    lineFour += " "+ k  * 4 + " |";
+                    lineFour += " " + k * 4 + " |";
                 }
             }
         }
@@ -50,6 +50,39 @@ public class Shapes {
     }
 
     public String tableSquares(int n) {
-        return "";
+        String header = "tableSquares()\n*** Output ***\n";
+        String lineOne = "";
+        String lineTwo = "";
+        String lineThree = "";
+        String lineFour = "";
+        String lineFive = "";
+        String lineSix = "";
+        int[][] stringHolder = new int[n][n];
+
+        for (int i = 0; i < n; i++) {
+
+            for (int j = 0, k = 1; j < n; j++, k++) {
+                if (stringHolder[i] == stringHolder[0]) {
+                    lineOne += " " + k + " |";
+                }
+                if (stringHolder[i] == stringHolder[1]) {
+                    lineTwo += " " + k * 2 + " |";
+                }
+                if (stringHolder[i] == stringHolder[2]) {
+                    lineThree += " " + k * 3 + " |";
+                }
+                if (stringHolder[i] == stringHolder[3]) {
+                    lineFour += " " + k * 4 + " |";
+                }
+                if (stringHolder[i] == stringHolder[4]) {
+                    lineFive += " " + k * 5 + " |";
+                }
+                if (stringHolder[i] == stringHolder[5]) {
+                    lineSix += " " + k * 6 + " |";
+                }
+            }
+        }
+        return header + "|" + lineOne + "\n" + "|" + lineTwo + "\n" + "|" + lineThree + "\n" + "|" + lineFour +
+                "\n" + "|" + lineFive + "\n" + "|" + lineSix;
     }
 }
