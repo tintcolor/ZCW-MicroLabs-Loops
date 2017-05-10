@@ -29,14 +29,14 @@ public class Shapes {
         String lineFour = "";
         int[][] stringHolder = new int[4][4];
 
-        for (int i = 0, m =1; i < stringHolder.length; i++,m++) {
+        for (int i = 0, m = 1; i < stringHolder.length; i++, m++) {
 
             for (int j = 0, k = 1; j < 4; j++, k++) {
                 if (stringHolder[i] == stringHolder[0]) {
-                    lineOne += " " + k*m + " |";
+                    lineOne += " " + k * m + " |";
                 }
                 if (stringHolder[i] == stringHolder[1]) {
-                    lineTwo += " " + k*m  + " |";
+                    lineTwo += " " + k * m + " |";
                 }
                 if (stringHolder[i] == stringHolder[2]) {
                     lineThree += " " + k * m + " |";
@@ -52,37 +52,20 @@ public class Shapes {
     public String tableSquares(int n) {
         String header = "tableSquares()\n*** Output ***\n";
         String lineOne = "";
-        String lineTwo = "";
-        String lineThree = "";
-        String lineFour = "";
-        String lineFive = "";
-        String lineSix = "";
-        int[][] stringHolder = new int[n][n];
-
-        for (int i = 0; i < n; i++) {
+        int count = 0;
+        for (int i = 0, m = 1; i < n; i++, m++) {
 
             for (int j = 0, k = 1; j < n; j++, k++) {
-                if (stringHolder[i] == stringHolder[0]) {
-                    lineOne += " " + k + " |";
-                }
-                if (stringHolder[i] == stringHolder[1]) {
-                    lineTwo += " " + k * 2 + " |";
-                }
-                if (stringHolder[i] == stringHolder[2]) {
-                    lineThree += " " + k * 3 + " |";
-                }
-                if (stringHolder[i] == stringHolder[3]) {
-                    lineFour += " " + k * 4 + " |";
-                }
-                if (stringHolder[i] == stringHolder[4]) {
-                    lineFive += " " + k * 5 + " |";
-                }
-                if (stringHolder[i] == stringHolder[5]) {
-                    lineSix += " " + k * 6 + " |";
+
+                if (i == count) {
+                    lineOne += " " + k * m + " |";
                 }
             }
+            if (i != n - 1) {
+                lineOne += "\n|";
+            }
+            count++;
         }
-        return header + "|" + lineOne + "\n" + "|" + lineTwo + "\n" + "|" + lineThree + "\n" + "|" + lineFour +
-                "\n" + "|" + lineFive + "\n" + "|" + lineSix;
+        return header + "|" + lineOne;
     }
 }
