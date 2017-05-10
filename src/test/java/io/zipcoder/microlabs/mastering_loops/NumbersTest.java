@@ -45,41 +45,44 @@ public class NumbersTest {
 
     @Test
     public void random4Test() {
-        //: Given
+        // Given
         Numbers numbers = new Numbers();
-        double randomNumber =  Math.random()*10;
-        String expected = "*** Output ***\nrandom4()\n";
-//        String expected = "*** Output ***\nrandom4()\n"+Integer.toString((int)randomNumber)+"\n"+
-//                Integer.toString((int)randomNumber)+"\n"+Integer.toString((int)randomNumber)+"\n"+Integer.toString((int)randomNumber);
 
-        //: When
+        // When
         String actual = numbers.random4();
+        int num1 = Character.getNumericValue(actual.charAt(0));
+        int num2 = Character.getNumericValue(actual.charAt(2));
+        int num3 = Character.getNumericValue(actual.charAt(4));
+        int num4 = Character.getNumericValue(actual.charAt(6));
 
-        //: Then
-       // Assert.
-        Assert.assertEquals("The two strings of random numbers are equal", expected, actual);
+        // Then
+        Assert.assertTrue(num1 >= 1 && num1 <= 10);
+        Assert.assertTrue(num2 >= 1 && num2 <= 10);
+        Assert.assertTrue(num3 >= 1 && num3 <= 10);
+        Assert.assertTrue(num4 >= 1 && num4 <= 10);
     }
 
     @Test
     public void evenTest() {
         //: Given
         Numbers numbers = new Numbers();
-        int n=20;
-        String expected = "*** Output ***\neven("+n+")\n2\n4\n6\n8\n10\n12\n14\n16\n18";
+        int n = 20;
+        String expected = "*** Output ***\neven(" + n + ")\n2\n4\n6\n8\n10\n12\n14\n16\n18";
 
         //: When
         String actual = numbers.even(n);
 
         //: Then
         Assert.assertEquals("The two strings of even numbers less than n are equal", expected, actual);
+        //Assert.assertTrue(actual.);
     }
 
     @Test
     public void powersTest() {
         //: Given
         Numbers numbers = new Numbers();
-        int n=8;
-        String expected = "*** Output ***\neven("+n+")\n2\n4\n8\n16\n32\n64\n128\n256";
+        int n = 8;
+        String expected = "*** Output ***\neven(" + n + ")\n2\n4\n8\n16\n32\n64\n128\n256";
 
         //: When
         String actual = numbers.powers(n);

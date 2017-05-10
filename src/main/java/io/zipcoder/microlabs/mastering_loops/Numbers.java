@@ -13,7 +13,7 @@ public class Numbers {
             if (i == 10) {
                 filledString += Integer.toString(i);
             } else {
-                filledString +=  "\n"+Integer.toString(i);
+                filledString += "\n" + Integer.toString(i);
             }
         }
         return output + onToTenTitle + filledString;
@@ -65,20 +65,20 @@ public class Numbers {
             filledString += Integer.toString((int) randomNumber) + "\n";
 
         }
-        return "*** Output ***\nrandom4()\n" + random.nextInt(3)+ "\n" + random.nextInt(5)
-                + "\n" + random.nextInt(2) + "\n" + random.nextInt(8);
+        return (random.nextInt(10) + 1) + "\n" + (random.nextInt(10) + 1)
+                + "\n" + (random.nextInt(10) + 1) + "\n" + (random.nextInt(10) + 1);
 
     }
 
     public String even(int n) {
 
         String output = "*** Output ***\n";
-        String evenNumbersTitle = "even("+n+")";
+        String evenNumbersTitle = "even(" + n + ")";
         String filledString = "";
         for (int i = 1; i < n; i++) {
 
             if (i % 2 == 0) {
-                filledString += "\n"+Integer.toString((i));
+                filledString += "\n" + Integer.toString((i));
             }
 
         }
@@ -88,11 +88,11 @@ public class Numbers {
     public String powers(int n) {
 
         String output = "*** Output ***\n";
-        String evenNumbersTest = "even("+n+")";
+        String evenNumbersTest = "even(" + n + ")";
         String filledString = "";
         for (int i = 1; i <= n; i++) {
 
-            filledString += "\n"+Integer.toString(((int)Math.pow(2,i)));
+            filledString += "\n" + Integer.toString(((int) Math.pow(2, i)));
 
         }
         return output + evenNumbersTest + filledString;

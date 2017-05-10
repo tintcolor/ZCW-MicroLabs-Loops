@@ -29,20 +29,20 @@ public class Shapes {
         String lineFour = "";
         int[][] stringHolder = new int[4][4];
 
-        for (int i = 0; i < stringHolder.length; i++) {
+        for (int i = 0, m =1; i < stringHolder.length; i++,m++) {
 
             for (int j = 0, k = 1; j < 4; j++, k++) {
                 if (stringHolder[i] == stringHolder[0]) {
-                    lineOne += " " + k + " |";
+                    lineOne += " " + k*m + " |";
                 }
                 if (stringHolder[i] == stringHolder[1]) {
-                    lineTwo += " " + k * 2 + " |";
+                    lineTwo += " " + k*m  + " |";
                 }
                 if (stringHolder[i] == stringHolder[2]) {
-                    lineThree += " " + k * 3 + " |";
+                    lineThree += " " + k * m + " |";
                 }
                 if (stringHolder[i] == stringHolder[3]) {
-                    lineFour += " " + k * 4 + " |";
+                    lineFour += " " + k * m + " |";
                 }
             }
         }

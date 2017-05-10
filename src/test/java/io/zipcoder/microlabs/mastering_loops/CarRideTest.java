@@ -11,11 +11,8 @@ public class CarRideTest {
     @Test
     public void areWeThereYetTest() {
         //given
-
         CarRide carRide = new CarRide();
         new Scanner("Yes");
-
-        // String convertToString = yes.nextLine();
         String expected = "Good!";
         // when
         String actual = carRide.areWeThereYet();
