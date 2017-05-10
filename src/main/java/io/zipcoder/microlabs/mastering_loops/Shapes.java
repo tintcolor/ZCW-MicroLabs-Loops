@@ -22,48 +22,31 @@ public class Shapes {
     }
 
     public String tableSquare() {
-        String header = "tableSquare()\n*** Output ***";
-        String lineBreaker = "|";
+        String header = "tableSquare()\n*** Output ***\n";
+        String lineOne = "";
+        String lineTwo = "";
+        String lineThree = "";
+        String lineFour = "";
         int[][] stringHolder = new int[4][4];
-
 
         for (int i = 0; i < stringHolder.length; i++) {
 
-            for (int j = 0; j < 4; j++) {
-
-               // stringHolder[i][j] = j;
-                if (stringHolder[i][j] == stringHolder[0][j]){
-                    System.out.println(stringHolder[i][j]);
+            for (int j = 0, k = 1; j < 4; j++, k++) {
+                if (stringHolder[i] == stringHolder[0]) {
+                    lineOne += " "+ k + " |";
                 }
-
-                if (stringHolder[i][j] == stringHolder[1][j]){
-                    // System.out.println(stringHolder[i][j]);
+                if (stringHolder[i] == stringHolder[1]) {
+                    lineTwo += " "+ k  * 2 + " |";
                 }
-
-                if (stringHolder[i][j] == stringHolder[2][j]){
-                    // System.out.println(stringHolder[i][j]);
+                if (stringHolder[i] == stringHolder[2]) {
+                    lineThree += " "+ k  * 3 + " |";
                 }
-
-                if (stringHolder[i][j] == stringHolder[3][j]){
-                    // System.out.println(stringHolder[i][j]);
+                if (stringHolder[i] == stringHolder[3]) {
+                    lineFour += " "+ k  * 4 + " |";
                 }
-//                .p,,o  vwwrrwte
-
-
-//                    if (j % 1 == 0) {
-//                        System.out.println(j);
-//                    } else if (j % 2 == 0) {
-//                        System.out.println(j * 2);
-//                    } else if (j % 3 == 0) {
-//                        System.out.println(j * 2);
-//                    }
-
             }
-            System.out.println();
         }
-
-
-        return "";
+        return header + "|" + lineOne + "\n" + "|" + lineTwo + "\n" + "|" + lineThree + "\n" + "|" + lineFour;
     }
 
     public String tableSquares(int n) {

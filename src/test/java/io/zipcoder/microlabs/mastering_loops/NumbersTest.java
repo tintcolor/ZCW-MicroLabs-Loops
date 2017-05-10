@@ -48,7 +48,7 @@ public class NumbersTest {
         //: Given
         Numbers numbers = new Numbers();
         double randomNumber =  Math.random()*10;
-        String expected = "*** Output ***\nrandom4()\n3\n5\n2\n8";
+        String expected = "*** Output ***\nrandom4()\n";
 //        String expected = "*** Output ***\nrandom4()\n"+Integer.toString((int)randomNumber)+"\n"+
 //                Integer.toString((int)randomNumber)+"\n"+Integer.toString((int)randomNumber)+"\n"+Integer.toString((int)randomNumber);
 
@@ -56,25 +56,36 @@ public class NumbersTest {
         String actual = numbers.random4();
 
         //: Then
+       // Assert.
         Assert.assertEquals("The two strings of random numbers are equal", expected, actual);
     }
 
     @Test
     public void evenTest() {
         //: Given
+        Numbers numbers = new Numbers();
+        int n=20;
+        String expected = "*** Output ***\neven("+n+")\n2\n4\n6\n8\n10\n12\n14\n16\n18";
 
         //: When
+        String actual = numbers.even(n);
 
         //: Then
+        Assert.assertEquals("The two strings of even numbers less than n are equal", expected, actual);
     }
 
     @Test
     public void powersTest() {
         //: Given
+        Numbers numbers = new Numbers();
+        int n=8;
+        String expected = "*** Output ***\neven("+n+")\n2\n4\n8\n16\n32\n64\n128\n256";
 
         //: When
+        String actual = numbers.powers(n);
 
         //: Then
+        Assert.assertEquals("The two strings of powers are equal", expected, actual);
     }
 
 }

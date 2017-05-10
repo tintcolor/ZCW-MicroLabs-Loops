@@ -1,5 +1,7 @@
 package io.zipcoder.microlabs.mastering_loops;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class CarRide {
@@ -7,26 +9,27 @@ public class CarRide {
     public String areWeThereYet() {
 
         Scanner yes = new Scanner(System.in);
-        String convertToString = yes.nextLine();
+        String convertToString = "";
+
         boolean continueLoop = true;
-        //  while (continueLoop) {
+        System.out.println("Are we there yet?");
 
-        //System.out.println(yes.toString());
+        while (continueLoop) {
+            convertToString = yes.nextLine();
 
-        switch (convertToString) {
-
-            case "No":
+            if (convertToString.equals("Yes")) {
+                return "Good";
+            } else {
                 System.out.println("Are we there yet?");
-                break;
-            case "Spoons":
-                System.out.println("Are we there yet?");
-                break;
-            case "Yes":
-            //    continueLoop = false;
-                return "Good!";
-//            }
+            }
+            continueLoop = true;
         }
         return "";
+    }
+
+    public static void main(String[] args) {
+        CarRide carRide = new CarRide();
+        carRide.areWeThereYet();
     }
 
 }
