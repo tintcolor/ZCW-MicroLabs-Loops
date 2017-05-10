@@ -34,14 +34,11 @@ public class Shapes {
             for (int j = 0, k = 1; j < 4; j++, k++) {
                 if (stringHolder[i] == stringHolder[0]) {
                     lineOne += " " + k * m + " |";
-                }
-                if (stringHolder[i] == stringHolder[1]) {
+                } else if (stringHolder[i] == stringHolder[1]) {
                     lineTwo += " " + k * m + " |";
-                }
-                if (stringHolder[i] == stringHolder[2]) {
+                } else if (stringHolder[i] == stringHolder[2]) {
                     lineThree += " " + k * m + " |";
-                }
-                if (stringHolder[i] == stringHolder[3]) {
+                } else if (stringHolder[i] == stringHolder[3]) {
                     lineFour += " " + k * m + " |";
                 }
             }

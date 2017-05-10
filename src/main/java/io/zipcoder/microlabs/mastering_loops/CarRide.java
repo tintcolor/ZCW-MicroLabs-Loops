@@ -1,34 +1,40 @@
 package io.zipcoder.microlabs.mastering_loops;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.InputStream;
 import java.util.Scanner;
 
 public class CarRide {
 
+    Scanner in;
+
+    CarRide(InputStream scannerIn) {
+        in = new Scanner(scannerIn);
+    }
+
     public String areWeThereYet() {
 
-        Scanner yes = new Scanner(System.in);
         String convertToString = "";
 
         boolean continueLoop = true;
         System.out.println("Are we there yet?");
+        String output = "";
 
         while (continueLoop) {
-            convertToString = yes.nextLine();
+            convertToString = in.nextLine();
+            System.out.println(convertToString);
 
             if (convertToString.equals("Yes")) {
-                return "Good";
+                output = "Good";
+                continueLoop = false;
             } else {
                 System.out.println("Are we there yet?");
             }
-            continueLoop = true;
         }
-        return "";
+        return output;
     }
 
     public static void main(String[] args) {
-        CarRide carRide = new CarRide();
+        CarRide carRide = new CarRide(System.in);
         carRide.areWeThereYet();
     }
 
