@@ -13,7 +13,7 @@ public class CarRide {
 
     public String areWeThereYet() {
 
-        String convertToString = "";
+        String convertToString;
 
         boolean continueLoop = true;
         System.out.println("Are we there yet?");
