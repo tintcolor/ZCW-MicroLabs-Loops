@@ -32,6 +32,7 @@ public class Shapes {
         for (int i = 0, m = 1; i < stringHolder.length; i++, m++) {
 
             for (int j = 0, k = 1; j < 4; j++, k++) {
+
                 if (stringHolder[i] == stringHolder[0]) {
                     lineOne += " " + k * m + " |";
                 } else if (stringHolder[i] == stringHolder[1]) {
@@ -70,7 +71,7 @@ public class Shapes {
 
     String spacer(double k, double m, int lengthSize) {
 
-        String addSpaces = "";
+        String addSpaces = " ";
         int f = (int) ((int) k * m);
         String lengthOfNum = Integer.toString(f);
         int g = lengthOfNum.length();
@@ -92,7 +93,6 @@ public class Shapes {
 
         String lengthOfNum = Integer.toString(a);
         int lengthOfSum = lengthOfNum.length();
-        System.out.println(lengthOfSum);
         return lengthOfSum;
     }
 }
