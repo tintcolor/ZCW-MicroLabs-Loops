@@ -54,7 +54,9 @@ public class Shapes {
 
             for (int j = 0, k = 1; j < n; j++, k++) {
 
-                if (i == count) {
+                if (i == count && k >= 2 && k * m < 10) {
+                    lineOne += spacer(2, k, m) + k * m + " |";
+                } else {
                     lineOne += " " + k * m + " |";
                 }
             }
@@ -63,6 +65,24 @@ public class Shapes {
             }
             count++;
         }
+        System.out.println(header + "|" + lineOne);
         return header + "|" + lineOne;
+    }
+
+    String spacer(int n, double k, double m) {
+        String addSpaces = "";
+
+
+        int f = (int) ((int)k * m);
+        String lengthOfNum = Integer.toString(f);
+        int g = lengthOfNum.length();
+        //System.out.println(g);
+
+
+        for (int i = 0; i <= g; i++) {
+            addSpaces += " ";
+        }
+
+        return addSpaces;
     }
 }
