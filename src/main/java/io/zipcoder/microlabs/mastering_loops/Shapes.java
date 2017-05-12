@@ -50,14 +50,13 @@ public class Shapes {
         String header = "tableSquares()\n*** Output ***\n";
         String lineOne = "";
         int count = 0;
-        for (int i = 0, m = 1; i < n; i++, m++) {
+        int lengthSize = getLengthOfString(n);
 
+        for (int i = 0, m = 1; i < n; i++, m++) {
             for (int j = 0, k = 1; j < n; j++, k++) {
 
-                if (i == count && k >= 2 && k * m < 10) {
-                    lineOne += spacer(2, k, m) + k * m + " |";
-                } else {
-                    lineOne += " " + k * m + " |";
+                if (i == count) {
+                    lineOne += spacer(k, m,lengthSize) + k * m + " |";
                 }
             }
             if (i != n - 1) {
@@ -69,20 +68,31 @@ public class Shapes {
         return header + "|" + lineOne;
     }
 
-    String spacer(int n, double k, double m) {
+    String spacer(double k, double m, int lengthSize) {
+
         String addSpaces = "";
-
-
-        int f = (int) ((int)k * m);
+        int f = (int) ((int) k * m);
         String lengthOfNum = Integer.toString(f);
         int g = lengthOfNum.length();
-        //System.out.println(g);
 
-
-        for (int i = 0; i <= g; i++) {
+        for (int i = lengthSize; i > g; i--) {
             addSpaces += " ";
         }
-
         return addSpaces;
+    }
+
+    int getLengthOfString(int n) {
+
+        int a = 0;
+        for (int i = 0, m = 1; i < n; i++, m++) {
+            for (int j = 0, k = 1; j < n; j++, k++) {
+                a = k * m;
+            }
+        }
+
+        String lengthOfNum = Integer.toString(a);
+        int lengthOfSum = lengthOfNum.length();
+        System.out.println(lengthOfSum);
+        return lengthOfSum;
     }
 }
