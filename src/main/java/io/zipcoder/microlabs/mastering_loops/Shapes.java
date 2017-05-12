@@ -31,7 +31,7 @@ public class Shapes {
             for (int j = 0, k = 1; j < 4; j++, k++) {
 
                 if (i == count) {
-                    addToTable += spacer(k, m,lengthSize) + k * m + "  |";
+                    addToTable += spacer(k, m,lengthSize) + k * m + " |";
                 }
             }
             if (i != 4 - 1) {
