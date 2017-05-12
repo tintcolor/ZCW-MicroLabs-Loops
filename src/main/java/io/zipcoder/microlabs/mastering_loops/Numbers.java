@@ -7,14 +7,12 @@ public class Numbers {
 
     public String oneToTen() {
         String output = "*** Output ***\n";
-        String onToTenTitle = "oneToTen()\n";
+        String onToTenTitle = "oneToTen()";
         String filledString = "";
         for (int i = 1; i < 11; i++) {
-            if (i == 10) {
-                filledString += Integer.toString(i);
-            } else {
-                filledString += "\n" + Integer.toString(i);
-            }
+
+                filledString += "\n" +Integer.toString(i);
+
         }
         return output + onToTenTitle + filledString;
     }
@@ -22,15 +20,13 @@ public class Numbers {
     public String oddNumbers() {
 
         String output = "*** Output ***\n";
-        String oodNumbersTitle = "oodNumbers()\n";
+        String oodNumbersTitle = "oodNumbers()";
         String filledString = "";
         for (int i = 1; i < 20; i++) {
             if (i % 2 != 0) {
-                if (i == 19) {
-                    filledString += Integer.toString(i);
-                } else {
-                    filledString += Integer.toString(i) + "\n";
-                }
+
+                    filledString += "\n"+Integer.toString(i) ;
+
             }
         }
         return output + oodNumbersTitle + filledString;
@@ -38,15 +34,13 @@ public class Numbers {
 
     public String squares() {
         String output = "*** Output ***\n";
-        String squareNumbersTitle = "squares()\n";
+        String squareNumbersTitle = "squares()";
         String filledString = "";
         for (int i = 1; i < 11; i++) {
 
-            if (i == 10) {
-                filledString += Integer.toString((int) Math.pow(i, 2));
-            } else {
-                filledString += Integer.toString((int) Math.pow(i, 2)) + "\n";
-            }
+
+                filledString +=  "\n"+Integer.toString((int) Math.pow(i, 2));
+
 
         }
         return output + squareNumbersTitle + filledString;
