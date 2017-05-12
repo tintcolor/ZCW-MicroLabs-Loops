@@ -8,6 +8,7 @@ public class CarRide {
     Scanner in;
 
     CarRide(InputStream scannerIn) {
+
         in = new Scanner(scannerIn);
     }
 
