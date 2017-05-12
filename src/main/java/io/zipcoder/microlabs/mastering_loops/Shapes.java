@@ -23,33 +23,29 @@ public class Shapes {
 
     public String tableSquare() {
         String header = "tableSquare()\n*** Output ***\n";
-        String lineOne = "";
-        String lineTwo = "";
-        String lineThree = "";
-        String lineFour = "";
-        int[][] stringHolder = new int[4][4];
+        String addToTable = "";
+        int count = 0;
+        int lengthSize = getLengthOfString(4);
 
-        for (int i = 0, m = 1; i < stringHolder.length; i++, m++) {
-
+        for (int i = 0, m = 1; i < 4; i++, m++) {
             for (int j = 0, k = 1; j < 4; j++, k++) {
 
-                if (stringHolder[i] == stringHolder[0]) {
-                    lineOne += " " + k * m + " |";
-                } else if (stringHolder[i] == stringHolder[1]) {
-                    lineTwo += " " + k * m + " |";
-                } else if (stringHolder[i] == stringHolder[2]) {
-                    lineThree += " " + k * m + " |";
-                } else if (stringHolder[i] == stringHolder[3]) {
-                    lineFour += " " + k * m + " |";
+                if (i == count) {
+                    addToTable += spacer(k, m,lengthSize) + k * m + "  |";
                 }
             }
+            if (i != 4 - 1) {
+                addToTable += "\n|";
+            }
+            count++;
         }
-        return header + "|" + lineOne + "\n" + "|" + lineTwo + "\n" + "|" + lineThree + "\n" + "|" + lineFour;
+        System.out.println(header + "|" + addToTable);
+        return header + "|" + addToTable;
     }
 
     public String tableSquares(int n) {
         String header = "tableSquares()\n*** Output ***\n";
-        String lineOne = "";
+        String addToTable = "";
         int count = 0;
         int lengthSize = getLengthOfString(n);
 
@@ -57,16 +53,16 @@ public class Shapes {
             for (int j = 0, k = 1; j < n; j++, k++) {
 
                 if (i == count) {
-                    lineOne += spacer(k, m,lengthSize) + k * m + " |";
+                    addToTable += spacer(k, m,lengthSize) + k * m + " |";
                 }
             }
             if (i != n - 1) {
-                lineOne += "\n|";
+                addToTable += "\n|";
             }
             count++;
         }
-        System.out.println(header + "|" + lineOne);
-        return header + "|" + lineOne;
+        System.out.println(header + "|" + addToTable);
+        return header + "|" + addToTable;
     }
 
     String spacer(double k, double m, int lengthSize) {
