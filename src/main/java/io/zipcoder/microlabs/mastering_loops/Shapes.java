@@ -45,7 +45,7 @@ public class Shapes {
 
     public String tableSquares(int n) {
         String header = "tableSquares()\n*** Output ***\n";
-        String addToTable = "";
+        String addValueToTable = "";
         int count = 0;
         int lengthSize = getLengthOfString(n);
 
@@ -53,16 +53,16 @@ public class Shapes {
             for (int j = 0, k = 1; j < n; j++, k++) {
 
                 if (i == count) {
-                    addToTable += spacer(k, m,lengthSize) + k * m + " |";
+                    addValueToTable += spacer(k, m,lengthSize) + k * m + " |";
                 }
             }
             if (i != n - 1) {
-                addToTable += "\n|";
+                addValueToTable += "\n|";
             }
             count++;
         }
-        System.out.println(header + "|" + addToTable);
-        return header + "|" + addToTable;
+        System.out.println(header + "|" + addValueToTable);
+        return header + "|" + addValueToTable;
     }
 
     String spacer(double k, double m, int lengthSize) {

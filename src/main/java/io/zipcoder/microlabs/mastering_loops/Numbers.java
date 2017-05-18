@@ -12,6 +12,7 @@ public class Numbers {
         for (int i = 1; i < 11; i++) {
                 filledString += "\n" +i;
         }
+        System.out.println(output + onToTenTitle + filledString);
         return output + onToTenTitle + filledString;
     }
 
@@ -56,7 +57,7 @@ public class Numbers {
         String filledString = "";
         for (int i = 1; i < n; i++) {
             if (i % 2 == 0) {
-                filledString += "\n" + Integer.toString((i));
+                filledString += "\n" + i;
             }
         }
         return output + evenNumbersTitle + filledString;
@@ -67,7 +68,7 @@ public class Numbers {
         String evenNumbersTest = "even(" + n + ")";
         String filledString = "";
         for (int i = 1; i <= n; i++) {
-            filledString += "\n" + Integer.toString(((int) Math.pow(2, i)));
+            filledString += "\n" +(int) Math.pow(2, i);
         }
         return output + evenNumbersTest + filledString;
 
